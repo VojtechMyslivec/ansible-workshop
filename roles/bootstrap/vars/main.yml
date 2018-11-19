@@ -1,0 +1,9 @@
+---
+# Ansible vars
+#
+
+bootstrap_packages:
+  - sudo
+  - python
+
+...

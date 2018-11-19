@@ -1,0 +1,15 @@
+---
+# Ansible playbook
+#
+
+- name: Common settings
+  hosts: all
+  roles:
+    - role: bootstrap
+      tags:
+        - bootstrap
+
+  tags:
+    - common
+
+...
