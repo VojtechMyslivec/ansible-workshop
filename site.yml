@@ -13,6 +13,10 @@
       tags:
         - mycooltools
 
+    - role: webserver
+      tags:
+        - webserver
+
   tags:
     - common
 

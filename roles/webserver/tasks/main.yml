@@ -1,0 +1,15 @@
+---
+
+- name: RedHat | Install apache httpd
+  yum:
+    name: 'httpd'
+    state: installed
+  when: ansible_os_family == 'RedHat'
+
+- name: Debian | Install apache httpd
+  apt:
+    name: 'apache2'
+    state: installed
+  when: ansible_os_family == 'Debian'
+
+...
