@@ -3,16 +3,9 @@
 #
 # Basic common setup
 
-- name: RHEL | Install required packages
-  yum:
+- name: Install required packages
+  package:
     name: '{{ bootstrap_packages }}'
     state: present
-  when: ansible_os_family == 'RedHat'
-
-- name: Debian | Install required packages
-  apt:
-    name: '{{ bootstrap_packages }}'
-    state: present
-  when: ansible_os_family == 'Debian'
 
 ...
