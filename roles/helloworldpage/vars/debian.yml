@@ -1,0 +1,10 @@
+---
+# Debian OS related variables
+
+webserver_user: 'www-data'
+webserver_service: 'apache2.service'
+
+webserver_secret_dir: '/etc/apache2/secrets'
+vhost_config: '/etc/apache2/sites-enabled/helloworld.conf'
+
+...

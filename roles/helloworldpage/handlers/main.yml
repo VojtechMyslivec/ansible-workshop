@@ -1,0 +1,8 @@
+---
+
+- name: Reload webserver
+  systemd:
+    name: '{{ webserver_service }}'
+    state: reloaded
+
+...

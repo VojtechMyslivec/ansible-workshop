@@ -1,0 +1,6 @@
+---
+# Common variables
+
+vhost_root: '/var/www/html'
+
+...

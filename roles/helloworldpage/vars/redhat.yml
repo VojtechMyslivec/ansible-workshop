@@ -1,0 +1,10 @@
+---
+# RedHat OS related variables
+
+webserver_user: 'apache'
+webserver_service: 'httpd.service'
+
+webserver_secret_dir: '/etc/httpd/secrets'
+vhost_config: '/etc/httpd/conf.d/vhost_helloworld.conf'
+
+...

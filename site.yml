@@ -17,6 +17,10 @@
       tags:
         - webserver
 
+    - role: helloworldpage
+      tags:
+        - helloworldpage
+
   tags:
     - common
 

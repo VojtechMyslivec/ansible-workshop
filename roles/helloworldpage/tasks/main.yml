@@ -1,0 +1,35 @@
+---
+
+- name: Set vars for RedHat
+  include_vars: 'redhat.yml'
+  when: ansible_os_family == 'RedHat'
+
+- name: Set vars for Debian
+  include_vars: 'debian.yml'
+  when: ansible_os_family == 'Debian'
+
+- name: Create secret directory
+  file:
+    path: '{{ webserver_secret_dir }}'
+    state: directory
+    owner: '{{ webserver_user }}'
+    mode: '0700'
+
+- name: Configure webserver
+  template:
+    src: 'vhost.conf.j2'
+    dest: '{{ vhost_config }}'
+  notify: Reload webserver
+
+- name: Configure htpasswd
+  htpasswd:
+    path: '{{ webserver_secret_dir }}/helloworld.htpasswd'
+    name: '{{ secret_user }}'
+    password: '{{ secret_pass }}'
+
+- name: Deploy index
+  template:
+    src: index.html.j2
+    dest: '{{ vhost_root }}/index.html'
+
+...
