@@ -9,6 +9,10 @@
       tags:
         - bootstrap
 
+    - role: mycooltools
+      tags:
+        - mycooltools
+
   tags:
     - common
 

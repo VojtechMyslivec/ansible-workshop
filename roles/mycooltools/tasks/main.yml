@@ -1,0 +1,8 @@
+---
+
+- name: install cool stuff to do work
+  package:
+    name: '{{ mycooltools }}'
+    state: installed
+
+...
